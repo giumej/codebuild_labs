@@ -13,11 +13,11 @@ phases:
       - go build ./lab_01/hello.go
   post_build:
     commands:
-      - ls /var
+      - ls /data
       - ps -ef
       - curl localhost
       - cat /etc/nginx/nginx.conf
-      - ./lab_01/hello.go >> /var/www/html/index.html
+      - ./lab_01/hello.go >> /data/www/html/index.html
 artifacts:
   files:
     - '**/*'
