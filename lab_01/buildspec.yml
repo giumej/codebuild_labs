@@ -8,3 +8,5 @@ phases:
 artifacts:
   files:
     - hello
+  base-directory: lab_01
+  discard-paths: yes
