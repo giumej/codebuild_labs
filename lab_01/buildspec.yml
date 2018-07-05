@@ -13,6 +13,7 @@ phases:
       - go build ./lab_01/hello.go
   post_build:
     commands:
+      - ls /var
       - ./lab_01/hello.go >> /var/www/html/index.html
 artifacts:
   files:
