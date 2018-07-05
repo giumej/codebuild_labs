@@ -2,7 +2,7 @@ version: 0.2
 phases:
   install:
     commands:
-      - apt install nginx
+      - apt get update && apt install nginx
   pre_build:
     commands:
       - service nginx start
