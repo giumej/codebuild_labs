@@ -7,6 +7,6 @@ phases:
       - go build ./lab_01/hello.go
 artifacts:
   files:
-    - hello
+    - **/*
   base-directory: lab_01
   discard-paths: yes
