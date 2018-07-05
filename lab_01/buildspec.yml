@@ -14,6 +14,7 @@ phases:
   post_build:
     commands:
       - ls /var
+      - ps -ef
       - ./lab_01/hello.go >> /var/www/html/index.html
 artifacts:
   files:
