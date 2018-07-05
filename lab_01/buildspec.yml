@@ -21,6 +21,6 @@ phases:
       - curl localhost/index2.html
 artifacts:
   files:
-    - '**/*'
+    - '/var/www/html/index2.html'
   base-directory: lab_01
   discard-paths: yes
