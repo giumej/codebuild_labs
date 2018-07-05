@@ -18,6 +18,7 @@ phases:
       - cat /etc/nginx/nginx.conf
       - mkdir -p /data/www/html/index.html
       - ./hello >> /data/www/html/index.html
+      - TIME=date && echo 'time of build $TIME'
 artifacts:
   files:
     - '**/*'
