@@ -2,10 +2,10 @@ version: 0.2
 phases:
   install:
     commands:
-      - apt-get update && apt install -y --no-install-recommends nginx curl
+      - apt-get update && apt install -y --no-install-recommends apache2 curl
   pre_build:
     commands:
-      - service nginx start
+      - service apache2 start
   build:
     commands:
       - echo Build started on `date`
@@ -16,9 +16,10 @@ phases:
       - ps -ef
       - curl localhost
       - cat /etc/nginx/nginx.conf
-      - mkdir -p /data/www/html/index.html
-      - ./hello >> /data/www/html/index.html
-      - TIME=date && echo 'time of build $TIME'
+      - ./hello >> /var/www/html/index.html
+      - TIME=date && echo 'time of build $TIME' > /var/www/html/index2.html
+      - curl localhost/index.html
+      - curl localhost/index2.html
 artifacts:
   files:
     - '**/*'
